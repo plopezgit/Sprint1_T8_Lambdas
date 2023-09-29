@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import n1Exe2.FilterableList;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -22,13 +24,8 @@ public class App {
 		words.add("November");
 		words.add("December");
 		
-		FilterListBy<String> filter = (list, ch) -> {	
-			List<String> result = words.stream().collect(Collectors.toList());
-			return result;
-		};
-		
-		System.out.println(filter.filterBy(words, null));
-		
+		words.forEach(word -> System.out.println(word));
+
 	}
 	
 	/*
