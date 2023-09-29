@@ -16,12 +16,12 @@ public class App {
 		words.add("firma");
 		words.add("metodo");
 		
-		FilterListBy<String> filter = (list, ch) -> {	
-			List<String> result = words.stream().filter(word -> (word.length() > 5) && (word.matches(ch))).collect(Collectors.toList());
+		FilterableList<String, Integer> filter = (list, ch, len) -> {	
+			List<String> result = words.stream().filter(word -> (word.length() > len) && (word.matches(ch))).collect(Collectors.toList());
 			return result;
 		};
 		
-		System.out.println(filter.filterBy(words, "[a-zA-Z]*o[a-zA-Z]*"));
+		System.out.println(filter.filterBy(words, "[a-zA-Z]*o[a-zA-Z]*", 5));
 		
 	}
 	

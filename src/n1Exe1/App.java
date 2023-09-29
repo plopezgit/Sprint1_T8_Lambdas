@@ -16,7 +16,7 @@ public class App {
 		words.add("firma");
 		words.add("metodo");
 		
-		FilterListBy<String> filter = (list, ch) -> {	
+		FilterableList<String> filter = (list, ch) -> {	
 			List<String> result = words.stream().filter(word -> word.matches(ch)).collect(Collectors.toList());
 			return result;
 		};
