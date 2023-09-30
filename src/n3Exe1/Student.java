@@ -2,54 +2,54 @@ package n3Exe1;
 
 public class Student {
 	
-	private String studientName;
-	private int studientAge;
-	private String studientCourse;
-	private int studientNote;
+	private String studentName;
+	private int studentAge;
+	private String studentCourse;
+	private int studentNote;
 	
 	public Student(String studientName, int studientAge, String studientCourse, int studientNote) {
-		this.studientName = studientName;
-		this.studientAge = studientAge;
-		this.studientCourse = studientCourse;
-		this.studientNote = studientNote;
+		this.studentName = studientName;
+		this.studentAge = studientAge;
+		this.studentCourse = studientCourse;
+		this.studentNote = studientNote;
 	}
-	
-	public String getStudientName() {
-		return studientName;
+
+	public String getStudentName() {
+		return studentName;
 	}
-	
-	public void setStudientName(String studientName) {
-		this.studientName = studientName;
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
-	
-	public int getStudientAge() {
-		return studientAge;
+
+	public int getStudentAge() {
+		return studentAge;
 	}
-	
-	public void setStudientAge(int studientAge) {
-		this.studientAge = studientAge;
+
+	public void setStudentAge(int studentAge) {
+		this.studentAge = studentAge;
 	}
-	
-	public String getStudientCourse() {
-		return studientCourse;
+
+	public String getStudentCourse() {
+		return studentCourse;
 	}
-	
-	public void setStudientCourse(String studientCourse) {
-		this.studientCourse = studientCourse;
+
+	public void setStudentCourse(String studentCourse) {
+		this.studentCourse = studentCourse;
 	}
-	
-	public int getStudientNote() {
-		return studientNote;
+
+	public int getStudentNote() {
+		return studentNote;
 	}
-	
-	public void setStudientNote(int studientNote) {
-		this.studientNote = studientNote;
+
+	public void setStudentNote(int studentNote) {
+		this.studentNote = studentNote;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Studient [studientName=" + studientName + ", studientAge=" + studientAge + ", studientCourse="
-				+ studientCourse + ", studientNote=" + studientNote + "]";
+		return "Name=" + studentName + ", Age=" + studentAge + ", Course=" + studentCourse
+				+ ", Note=" + studentNote;
 	}
 	
 }
