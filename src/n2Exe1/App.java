@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import n1Exe2.FilterableList;
-
 public class App {
 
 	public static void main(String[] args) {
@@ -23,7 +21,7 @@ public class App {
 			return result;
 		};
 
-		System.out.println(filter.filterBy(names, "A", 3));
+		filter.filterBy(names, "A", 3).forEach(System.out::println);
 	}
 
 	/*
