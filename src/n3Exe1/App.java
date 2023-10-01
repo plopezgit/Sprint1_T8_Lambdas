@@ -16,8 +16,11 @@ public class App {
 		studentList.add(new Student("Viverra", 22, "Java", 5));
 		studentList.add(new Student("Mauris", 21, "PHP", 6));
 		studentList.add(new Student("Vivamus", 19, "PHP", 3));
+		studentList.add(new Student("Rock", 19, "Python", 2));
+		studentList.add(new Student("Phio", 19, "Python", 3));
 		
 		studentList.forEach(System.out::println);
+		System.out.println("ends");
 		
 		FilterableList<Student, String, Integer> filter = (list, ch, len) -> {
 			
@@ -27,7 +30,7 @@ public class App {
 		};
 		
 		filter.filterBy(studentList, "A", null).forEach(System.out::println);
-		
+		System.out.println("ends");
 		
 		FilterableList<Student, String, Integer> filter2 = (list, ch, len) -> {
 			
@@ -37,7 +40,7 @@ public class App {
 		};
 		
 		filter2.filterBy(studentList, "A", 5).forEach(System.out::println);
-		
+		System.out.println("ends");
 		
 		FilterableList<Student, String, Integer> filter3 = (list, ch, len) -> {
 		    
@@ -51,7 +54,7 @@ public class App {
 		};
 		
 		filter3.filterBy(studentList, "PHP", 5).forEach(System.out::println);
-		
+		System.out.println("ends");
 		
 		FilterableList<Student, String, Integer> filter4 = (list, ch, len) -> {
 		    
