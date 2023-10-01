@@ -2,6 +2,7 @@ package n2Exe4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class App {
@@ -10,17 +11,41 @@ public class App {
 		
 		List<String> thingsList = new ArrayList<>();
 		
-		thingsList.add("I4n Xan8adu did Ku6bla Khan");
-		thingsList.add("A stat2ely pleasur0e-dome decree1:");
-		thingsList.add("Wher3 Alph, the sacr3d riv3r, ran");
-		thingsList.add("Through caverns measureless to m4n");
-		thingsList.add("Down to a sunless sea");
-		thingsList.add("Eu");
+		thingsList.add("56");
+		thingsList.add("in Xanadu did Kubla Khan");
+		thingsList.add("a stately pleasure-dome decree");
+		thingsList.add("wher3 Alph, th# sacr3d riv3r, ran");
+		thingsList.add("through cav3rns m3asur3l3ss to man");
+		thingsList.add("down to a sunless sea");
+		thingsList.add("eu");
+		thingsList.add("1");
 
-		thingsList.forEach(System.out::println);
+		OrderMapAndFilterTest consecutiveProcess = (list, i, l, c1, c2) -> {
+			List<String> processedList = new ArrayList<>(); 
+			processedList = list.stream()
+					.sorted((s1, s2) -> s1.charAt(i) - s2.charAt(i))
+					.sorted((s1, s2) -> {
+						boolean s1e = s1.contains(l);
+						boolean s2e = s2.contains(l);
+						if (s1e && !s2e) {
+							return -1;
+						} else if (!s1e && s2e) {
+							return 1; 
+						} else {
+							return 0; 
+						}
+					})
+					.map(s -> s.replace(c1, c2))
+					//.filter(s -> s.chars().allMatch(Character::isDigit)) // Descomment to get only elemnts of numbers
+					.collect(Collectors.toList());
+			
+			return processedList; 
+		};
+		
+		consecutiveProcess.processingBy(thingsList, 0, "e", 'a', '4').forEach(System.out::println);
 		
 	}
-	
+
 	/*
 	 * Crea una lista que contenga algunas cadenas de texto y números.
 	 * Ordénalas por:
