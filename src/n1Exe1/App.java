@@ -12,16 +12,18 @@ public class App {
 		words.add("oasis");
 		words.add("aorta");
 		words.add("pio");
-		words.add("alma");
+		words.add("al");
 		words.add("firma");
 		words.add("metodo");
 		
 		FilterableList<String> filter = (list, ch) -> {	
-			List<String> result = words.stream().filter(word -> word.matches(ch)).collect(Collectors.toList());
+			List<String> result = words.stream().filter(word -> word.contains(ch)).collect(Collectors.toList());
 			return result;
 		};
 		
-		System.out.println(filter.filterBy(words, "[a-zA-Z]*o[a-zA-Z]*"));
+		System.out.println(filter.filterBy(words, "o"));
+		
+		
 		
 	}
 	

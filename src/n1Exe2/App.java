@@ -17,11 +17,11 @@ public class App {
 		words.add("metodo");
 		
 		FilterableList<String, Integer> filter = (list, ch, len) -> {	
-			List<String> result = words.stream().filter(word -> (word.length() > len) && (word.matches(ch))).collect(Collectors.toList());
+			List<String> result = words.stream().filter(word -> (word.length() > len) && (word.contains(ch))).collect(Collectors.toList());
 			return result;
 		};
 		
-		System.out.println(filter.filterBy(words, "[a-zA-Z]*o[a-zA-Z]*", 5));
+		System.out.println(filter.filterBy(words, "o", 5));
 		
 	}
 	
