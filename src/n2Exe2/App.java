@@ -15,10 +15,9 @@ public class App {
 
 	}
 	
-	public static String lambdaComasIf (List<Integer> list) { // lambda
+	public static String lambdaComasIf (List<Integer> list) { // lambda Ref: https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.25 // https://www.geeksforgeeks.org/java-8-streams-collectors-joining-method-with-examples/
 		return list.stream()
-                .map(n -> (n % 2 == 0) ? "e"+n : "o"+n)
-                .collect(Collectors.joining(", "));
+                .map(n -> (n % 2 == 0) ? "e" + n : "o" + n).collect(Collectors.joining(", "));
 	}
 	
 	public static String comasIf (List<Integer> list) { 
