@@ -1,42 +1,39 @@
 package n2Exe2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class App {
 
 	public static void main(String[] args) {
 		
-		List<Integer> list = new ArrayList<>();
-		list.add(2);
-		list.add(10);
-		list.add(13);
-		list.add(27);
-		list.add(115);
-		list.add(28);
-		System.out.println(App.comasIf(list));
-		
+		List<Integer> list = new ArrayList<>(Arrays.asList(2,10,13,27,115,28));
+		System.out.println(lambdaComasIf(list)); // lambda
+		System.out.println(comasIf(list)); // no lambda
+
 	}
 	
-	public static String comasIf (List<Integer> list) { //No lambda
+	public static String lambdaComasIf (List<Integer> list) { // lambda
+		return list.stream()
+                .map(n -> (n % 2 == 0) ? "e"+n : "o"+n)
+                .collect(Collectors.joining(", "));
+	}
+	
+	public static String comasIf (List<Integer> list) { 
 		String result = "";
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).intValue() == (list.get(i).intValue()*1/2*(2))) {
-				result +="e"+list.get(i).toString()+",";
+				result +="e"+list.get(i).toString()+", ";
 			} else {
-				result +="o"+list.get(i).toString()+",";
+				result +="o"+list.get(i).toString()+", ";
 			}
 		}
 
 		return result;
 	}
 	
-	public static String lambdaComasIf (List<Integer> list) { // lambda
-		String result = "List: ";
-		
-
-		return result;
-	}
 	
 	/*
 	 * Programa un método que devuelve una cadena separada por comas, 
