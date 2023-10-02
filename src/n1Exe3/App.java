@@ -1,28 +1,18 @@
 package n1Exe3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class App {
 
 	public static void main(String[] args) {
 		
-		List <String> words = new ArrayList<>();
-		words.add("January");
-		words.add("February");
-		words.add("March");
-		words.add("April");
-		words.add("May");
-		words.add("June");
-		words.add("July");
-		words.add("August");
-		words.add("September");
-		words.add("October");
-		words.add("November");
-		words.add("December");
+		List <String> words = 
+				new ArrayList<>(Arrays.asList("January", "February", "March", "April", "May", "June", "July",
+						"August", "September", "October", "November", "December"));
 		
 		words.forEach(word -> System.out.println(word));
-
 	}
 	
 	/*

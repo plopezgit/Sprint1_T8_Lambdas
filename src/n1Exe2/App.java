@@ -1,6 +1,7 @@
 package n1Exe2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,14 +9,9 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		List <String> words = new ArrayList<>();
-		words.add("oasis");
-		words.add("aorta");
-		words.add("pio");
-		words.add("alma");
-		words.add("firma");
-		words.add("metodo");
-		
+		List <String> words = 
+				new ArrayList<>(Arrays.asList("oasis", "aorta", "pio", "al", "firma", "metodo"));
+	
 		FilterableList<String, Integer> filter = (list, ch, len) -> {	
 			List<String> result = words.stream().filter(word -> (word.length() > len) && (word.contains(ch))).collect(Collectors.toList());
 			return result;
