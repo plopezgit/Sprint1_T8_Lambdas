@@ -33,7 +33,19 @@ public class ACUsedAsParameterOfMethodCall {
 		    }
 		    return FileVisitResult.CONTINUE;
 		  }});
+		 *
+		 * Or when creating Threads example:
 		 */
+		
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				//Code
+				
+			}
+			
+		});
 		
 	}
 	
