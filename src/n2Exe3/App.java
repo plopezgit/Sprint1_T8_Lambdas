@@ -5,26 +5,27 @@ public class App {
 	public static void main(String[] args) {
 		
 		Calculable calc = (n1, op, n2) -> {
-			float result = 0;
-			switch (op) {
-				case '+' :
-					result = n1 + n2;
-				break;
-				case '-' :
-					result = n1 - n2;
-				break;
-				case '*' :
-					result = n1 * n2;
-				break;
-				case '/' :
-					result = n1 / n2;
-				break;
+			return switch (op) {
+			case '+' -> n1 + n2;
+			case '-' -> n1 - n2;
+			case '*' -> n1 * n2;
+			case '/' -> {
+	            if (n2 == 0) {
+	                throw new IllegalArgumentException("Can't divide by 0.");
+	            }
+	            yield n1 / n2;
 			}
-			return result;
+		    default -> throw new IllegalArgumentException("Unknown operator.");
+			};
 
 		};
 		
-		System.out.println(calc.operate(1, '+',  2));
+		try {
+			System.out.println(calc.operate(1, '9',  0));
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		} 
 
 	}
 	

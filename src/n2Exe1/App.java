@@ -9,7 +9,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		List<String> names = new ArrayList<>(Arrays.asList("Manel", "Lex", "Ada", "Luisa", "Romina", "Juan"));
+		List<String> names = new ArrayList<>(Arrays.asList("Manel", "Lex", "Luisa", "Romina", "Juan"));
 
 		FilterableList<String, Integer> filter = (lis, ch, len) -> {
 			List<String> result = names.stream().filter(word -> (word.length() == len) && (word.startsWith(ch)))
