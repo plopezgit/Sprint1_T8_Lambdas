@@ -12,6 +12,15 @@ public class App {
 		};
 
 		reverse.reverse("etneup");
+		
+		//
+		
+		Reversable reverse2 = (frase) -> {
+			StringBuilder reversed = new StringBuilder(frase).reverse();
+            return reversed.toString();
+		};
+		
+		System.out.println(reverse2.reverse(" razurc "));
 	}
 
 	/*
