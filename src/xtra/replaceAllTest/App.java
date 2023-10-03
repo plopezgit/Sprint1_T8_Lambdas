@@ -12,7 +12,10 @@ public class App {
 		
 		methodNames.forEach(m -> System.out.println(m));
 
+<<<<<<< HEAD
 		//https://github.com/plopezgit/Sprint1_T8_Lambdas/issues/2#issuecomment-1742736153
+=======
+>>>>>>> d852cef (uses Comparator.comparing(...).thenComparing(...) method class)
 		methodNames.replaceAll(m -> m.toUpperCase());
 		//methodNames.replaceAll(String::toUpperCase);
 		methodNames.forEach(System.out::println);
