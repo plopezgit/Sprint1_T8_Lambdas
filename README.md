@@ -20,6 +20,8 @@ You have to do the same as in the previous point, but now, the method must retur
 
 Create a list with the names of the months of the year. Print all elements of the list with a lambda.
 
+** @plopezgit: Solved by forEach passing the lambda expression**
+
 - Exercise 4
 
 Make the same impression as the previous point, but through method reference.
