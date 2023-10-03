@@ -14,21 +14,25 @@ Given a list of Strings, write a method that returns a list of all strings that 
 
 You have to do the same as in the previous point, but now, the method must return a list with the Strings that, in addition to containing the letter 'o', also have more than 5 letters. Print the result.
 
-** @plopezgit: Solved by re-implementing a generic functional interface method using lambda syntax, and Stream filter method**
+**@plopezgit: Solved by re-implementing a generic functional interface method using lambda syntax, and Stream filter method**
 
 - Exercise 3
 
 Create a list with the names of the months of the year. Print all elements of the list with a lambda.
 
-** @plopezgit: Solved by forEach passing the lambda expression**
+**@plopezgit: Solved by Iterable.forEach method passing a lambda expression which body simply calls System.out.println**
 
 - Exercise 4
 
 Make the same impression as the previous point, but through method reference.
 
+**@plopezgit: Solved by Iterable.forEach method passing a lambda expression which body writes a ::println method reference**
+
 - Exercise 5
 
 Create a Functional Interface with a method called getPiValue() that must return a double. From the main() of the main class, instantiate the interface and assign it the value 3.1415. Call the getPiValue() method and print the result.
+
+**@plopezgit: Solved by implementing the functional interface required method using a lambda syntax**
 
 - Exercise 6
 
