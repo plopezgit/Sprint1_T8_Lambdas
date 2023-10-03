@@ -8,11 +8,13 @@ All exercises must use the Java 8+ Java Lambdas and Streams API.
 
 Given a list of Strings, write a method that returns a list of all strings that contain the letter 'o'. Print the result.
 
-** @plopezgit: Solved by implementing a generic functional interface method using lambda syntax, and Stream filter method**
+**@plopezgit: Solved by implementing a generic functional interface method using lambda syntax, and Stream filter method**
 
 - Exercise 2
 
 You have to do the same as in the previous point, but now, the method must return a list with the Strings that, in addition to containing the letter 'o', also have more than 5 letters. Print the result.
+
+** @plopezgit: Solved by re-implementing a generic functional interface method using lambda syntax, and Stream filter method**
 
 - Exercise 3
 
