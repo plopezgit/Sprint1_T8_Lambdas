@@ -115,10 +115,5 @@ https://dzone.com/articles/refactoring-exercise-using
 
 https://dzone.com/articles/functional-programming-patterns-with-java-8
 
-Addtional references:
-
-https://www.youtube.com/watch?v=8pDm_kH4YKY&t
-
-https://www.youtube.com/watch?v=C_QbkGU_lqY
 
 
